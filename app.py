@@ -1,12 +1,20 @@
-from flask import Flask, request
+from flask import Flask, request, render_template
 
-app = Flask(__name__)
+TEMPLATE_DIR = "templates"
+STATIC_DIR = "static"
+
+app = Flask(__name__, template_folder=TEMPLATE_DIR, static_folder=STATIC_DIR)
 app.url_map.strict_slashes = False
 
 
 @app.route("/")
 def home():
     return "Hello, World!"
+
+
+@app.route("/index")
+def index():
+    return render_template("index.html")
 
 
 @app.route("/hello/<name>")
