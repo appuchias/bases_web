@@ -7,7 +7,7 @@ body {
 }
 
 .container {
-    max-width: 1600px;
+    max-width: 1400px;
     height: 100%;
     margin: 0 auto;
     padding: 0 3rem;
@@ -33,6 +33,23 @@ h1.title {
     background-color: #f0f8ff;
 }
 
+.profile .img {
+    height: 128px;
+    width: 192px;
+
+    margin: 0 auto;
+
+    background-image: url('/static/images/matrix-elmo.gif');
+    background-size: cover;
+    background-position: center;
+}
+
+.profile .name {
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 20px;
+}
+
 .sections {
     display: flex;
     flex-direction: column;
@@ -50,6 +67,10 @@ h1.title {
 .section:hover {
     transform: scale(1.02);
     transition: transform 0.3s;
+}
+
+.section img {
+    max-height: 128px;
 }
 
 .box {
